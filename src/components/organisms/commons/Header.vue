@@ -3,6 +3,7 @@
     app
     color="primary"
     dark
+    clippedLeft
   >
     <site-title />
 
