@@ -8,15 +8,12 @@
     color="#757575"
     class="elevation-6"
   >
-    <v-list-item class="px-2 py-1" @click="alert('toProfile')">
-      <v-list-item-avatar>
-        <v-img src=""></v-img>
-      </v-list-item-avatar>
-
-      <v-list-item-content>
-        <v-list-item-title>{{ '' }}</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
+    <login-user
+      class="px-2 py-1"
+      @click="alert('toProfile')"
+      :avatar="require('@/assets/avatars/2220812101741.jpg')"
+      :name="loginUser.name"
+    />
 
     <v-divider></v-divider>
 
@@ -147,10 +144,21 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
+import LoginUser from '@/components/molecules/list-items/LoginUser.vue';
 
 export default defineComponent({
-//   components: {
-//     'site-header': Header,
-//   },
+  components: {
+    'login-user': LoginUser,
+  },
+  setup: () => {
+    const loginUser = {
+      avatar: '@/assets/avatars/2220812101741.jpg',
+      name: 'hato-poppo',
+    };
+
+    return {
+      loginUser,
+    };
+  },
 });
 </script>
