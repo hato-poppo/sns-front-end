@@ -33,12 +33,7 @@
         nav
         dense
       >
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-cog</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Settings</v-list-item-title>
-        </v-list-item>
+        <setting @click="alert('toSetting')" />
       </v-list>
     </template>
 
@@ -51,6 +46,7 @@ import LoginUser from '@/components/molecules/list-items/LoginUser.vue';
 import TimeLine from '@/components/molecules/list-items/TimeLine.vue';
 import Group from '@/components/molecules/list-items/Group.vue';
 import User from '@/components/molecules/list-items/User.vue';
+import Setting from '@/components/molecules/list-items/Setting.vue';
 
 export default defineComponent({
   components: {
@@ -58,6 +54,7 @@ export default defineComponent({
     'time-line': TimeLine,
     Group,
     User,
+    Setting,
   },
   setup: () => {
     const loginUser = {
