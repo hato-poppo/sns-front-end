@@ -21,7 +21,7 @@
       nav
       dense
     >
-      <time-line :badgeCount="6" @click="alert('toTimeLine')" />
+      <time-line :badgeCount="6" />
       <group @click="alert('toGroup')" />
       <user @click="alert('toUser')" />
     </v-list>
@@ -33,7 +33,7 @@
         nav
         dense
       >
-        <setting @click="alert('toSetting')" />
+        <setting @click="alert('toetting')" />
       </v-list>
     </template>
 
