@@ -9,6 +9,11 @@ const routes: Array<RouteConfig> = [
     name: 'home',
     component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
   },
+  {
+    path: '/timeline',
+    name: 'TimeLine',
+    component: () => import(/* webpackChunkName: "post" */ '@/views/TimeLine.vue'),
+  },
 ];
 
 const router = new VueRouter({

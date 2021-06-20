@@ -1,5 +1,5 @@
 <template>
-  <v-list-item link>
+  <v-list-item link @click="toTimeLine()">
     <v-list-item-icon>
       <v-badge
         color="red"
@@ -19,6 +19,13 @@ import { defineComponent } from '@vue/composition-api';
 export default defineComponent({
   props: {
     badgeCount: Number,
+  },
+  setup: (_, context) => {
+    const toTimeLine = () => context.root.$router.push({ name: 'TimeLine' });
+
+    return {
+      toTimeLine,
+    };
   },
 });
 </script>
