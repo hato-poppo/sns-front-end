@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row v-for="post in posts" v-bind:key="post.id">
       <v-col>
-        <post />
+        <post :value="post" />
       </v-col>
     </v-row>
   </v-container>
@@ -15,6 +15,44 @@ import Post from '@/components/organisms/contents/Post.vue';
 export default defineComponent({
   components: {
     Post,
+  },
+  setup: () => {
+    const posts = [
+      {
+        id: 10, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿10', content: 'これはテスト投稿10です',
+      },
+      {
+        id: 9, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿9', content: 'これはテスト投稿9です',
+      },
+      {
+        id: 8, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿8', content: 'これはテスト投稿8です',
+      },
+      {
+        id: 7, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿7', content: 'これはテスト投稿7です',
+      },
+      {
+        id: 6, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿6', content: 'これはテスト投稿6です',
+      },
+      {
+        id: 5, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿5', content: 'これはテスト投稿5です',
+      },
+      {
+        id: 4, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿4', content: 'これはテスト投稿4です',
+      },
+      {
+        id: 3, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿3', content: 'これはテスト投稿3です',
+      },
+      {
+        id: 2, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿2', content: 'これはテスト投稿2です',
+      },
+      {
+        id: 1, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿1', content: 'これはテスト投稿1です',
+      },
+    ];
+
+    return {
+      posts,
+    };
   },
 });
 </script>
