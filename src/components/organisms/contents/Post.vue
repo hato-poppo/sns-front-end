@@ -3,27 +3,14 @@
     class="mx-auto"
     color="#8CD790"
     dark
-    max-width="800"
+    :max-width="width"
   >
-    <v-card-title>
-      <v-icon
-        large
-        left
-      >
-        mdi-message-text
-      </v-icon>
-      <span class="title font-weight-light">{{ value.title }}</span>
-    </v-card-title>
-
-    <v-card-text color="#77AF9C" class="headline font-weight-bold" style="white-space: pre-line;">
-      {{ value.content }}
-    </v-card-text>
+    <post-title :text="value.title" />
+    <post-content :text="value.content" />
 
     <v-card-actions>
-      <!-- <v-list-item class="grow"></v-list-item> -->
       <login-user
         class="px-2 py-1"
-        @click="alert('toProfile')"
         :avatar="require('@/assets/avatars/2220812101741.jpg')"
         :name="value.user_name"
       />
@@ -34,13 +21,21 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
 import LoginUser from '@/components/molecules/list-items/LoginUser.vue';
+import Title from '@/components/molecules/post-items/Title.vue';
+import Content from '@/components/molecules/post-items/Content.vue';
 
 export default defineComponent({
   components: {
     'login-user': LoginUser,
+    'post-title': Title,
+    'post-content': Content,
   },
   props: {
     value: Object,
+    width: {
+      type: Number,
+      default: 500,
+    },
   },
 });
 </script>
