@@ -1,5 +1,19 @@
 <template>
   <v-container>
+    <v-row>
+      <v-col>
+        <v-toolbar
+          flat
+          class="mx-auto"
+          :width="500"
+        >
+          <v-spacer></v-spacer>
+          <v-btn icon>
+            <v-icon>mdi-magnify</v-icon>
+          </v-btn>
+        </v-toolbar>
+      </v-col>
+    </v-row>
     <v-row v-for="post in posts" v-bind:key="post.id">
       <v-col>
         <post :value="post" />
