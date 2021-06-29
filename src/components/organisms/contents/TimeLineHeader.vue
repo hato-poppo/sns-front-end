@@ -4,7 +4,9 @@
     :max-width="width"
     elevation="1"
   >
-    <v-btn color="primary" icon dark><v-icon>mdi-pencil-plus</v-icon></v-btn>
+    <v-btn color="primary" icon dark>
+      <v-icon>mdi-pencil-plus</v-icon>
+    </v-btn>
     <v-spacer></v-spacer>
     <v-btn icon>
       <v-icon>mdi-magnify</v-icon>
