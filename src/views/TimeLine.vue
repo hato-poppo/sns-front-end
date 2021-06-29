@@ -2,16 +2,7 @@
   <v-container>
     <v-row>
       <v-col>
-        <v-toolbar
-          flat
-          class="mx-auto"
-          :width="500"
-        >
-          <v-spacer></v-spacer>
-          <v-btn icon>
-            <v-icon>mdi-magnify</v-icon>
-          </v-btn>
-        </v-toolbar>
+        <time-line-header />
       </v-col>
     </v-row>
     <v-row v-for="post in posts" v-bind:key="post.id">
@@ -24,10 +15,12 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
+import TimeLineHeader from '@/components/organisms/contents/TimeLineHeader.vue';
 import Post from '@/components/organisms/contents/Post.vue';
 
 export default defineComponent({
   components: {
+    'time-line-header': TimeLineHeader,
     Post,
   },
   setup: () => {
