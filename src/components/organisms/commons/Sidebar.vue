@@ -6,11 +6,11 @@
     dark
     clipped
     color="#757575"
-    class="elevation-6"
+    flat
   >
     <login-user
       class="px-2 py-1"
-      @click="alert('toProfile')"
+      @click="dialog.open()"
       :avatar="require('@/assets/avatars/2220812101741.jpg')"
       :name="loginUser.name"
     />
@@ -37,11 +37,17 @@
       </v-list>
     </template>
 
+    <v-dialog
+      v-model="dialog.show"
+    >
+      aaaaa
+    </v-dialog>
+
   </v-navigation-drawer>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent, reactive } from '@vue/composition-api';
 import LoginUser from '@/components/molecules/list-items/LoginUser.vue';
 import TimeLine from '@/components/molecules/list-items/TimeLine.vue';
 import Group from '@/components/molecules/list-items/Group.vue';
@@ -62,8 +68,19 @@ export default defineComponent({
       name: 'hato-poppo',
     };
 
+    const dialog = reactive({
+      show: false,
+      open: () => {
+        dialog.show = true;
+      },
+      close: () => {
+        dialog.show = false;
+      },
+    });
+
     return {
       loginUser,
+      dialog,
     };
   },
 });
