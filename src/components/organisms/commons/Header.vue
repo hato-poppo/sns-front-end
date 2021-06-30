@@ -4,6 +4,7 @@
     color="primary"
     dark
     clippedLeft
+    flat
   >
     <site-title />
 
