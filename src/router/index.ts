@@ -14,6 +14,11 @@ const routes: Array<RouteConfig> = [
     name: 'TimeLine',
     component: () => import(/* webpackChunkName: "post" */ '@/views/TimeLine.vue'),
   },
+  {
+    path: '/user',
+    name: 'User',
+    component: () => import(/* webpackChunkName: "post" */ '@/views/User.vue'),
+  },
 ];
 
 const router = new VueRouter({
