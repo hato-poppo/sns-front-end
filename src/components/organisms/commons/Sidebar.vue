@@ -23,7 +23,7 @@
     >
       <time-line :badgeCount="6" />
       <group @click="alert('toGroup')" />
-      <user @click="alert('toUser')" />
+      <user />
     </v-list>
 
     <v-divider></v-divider>

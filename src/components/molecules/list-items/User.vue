@@ -1,5 +1,5 @@
 <template>
-  <v-list-item link>
+  <v-list-item link @click="toTimeLine()">
     <v-list-item-icon>
       <v-icon>mdi-account-multiple</v-icon>
     </v-list-item-icon>
@@ -10,5 +10,13 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
 
-export default defineComponent({});
+export default defineComponent({
+  setup: (_, context) => {
+    const toTimeLine = () => context.root.$router.push({ name: 'User' });
+
+    return {
+      toTimeLine,
+    };
+  },
+});
 </script>
