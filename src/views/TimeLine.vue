@@ -2,6 +2,16 @@
   <v-container>
     <v-row>
       <v-col>
+        <v-toolbar
+          class="mx-auto"
+          flat
+        >
+          <div class="text-h4">TimeLine</div>
+        </v-toolbar>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <time-line-header />
       </v-col>
     </v-row>
