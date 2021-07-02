@@ -5,6 +5,7 @@
         <v-toolbar
           class="mx-auto"
           flat
+          color="rgba(0, 0, 0, 0)"
         >
           <div class="text-h4">TimeLine</div>
         </v-toolbar>

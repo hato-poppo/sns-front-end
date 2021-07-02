@@ -25,3 +25,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+main {
+  background-color: #FFF9EE;
+}
+</style>
