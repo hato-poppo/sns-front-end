@@ -5,7 +5,7 @@
     expand-on-hover
     dark
     clipped
-    color="#757575"
+    color="accent"
     flat
   >
     <login-user
