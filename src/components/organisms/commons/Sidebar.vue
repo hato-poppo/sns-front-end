@@ -1,5 +1,7 @@
 <template>
   <v-navigation-drawer
+    v-model="sidebar.show"
+    :mini-variant.sync="sidebar.min"
     app
     permanent
     dark
@@ -33,6 +35,13 @@
         dense
       >
         <setting @click="alert('toetting')" />
+        <v-list-item link @click="sidebar.toggle()">
+          <v-list-item-icon>
+            <v-icon v-if="sidebar.min">mdi-chevron-right</v-icon>
+            <v-icon v-else>mdi-chevron-left</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Close</v-list-item-title>
+        </v-list-item>
       </v-list>
     </template>
 
@@ -77,9 +86,18 @@ export default defineComponent({
       },
     });
 
+    const sidebar = reactive({
+      show: true,
+      min: false,
+      toggle: () => {
+        sidebar.min = !sidebar.min;
+      },
+    });
+
     return {
       loginUser,
       dialog,
+      sidebar,
     };
   },
 });

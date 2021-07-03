@@ -12,13 +12,50 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col>
-        <time-line-header />
+      <v-col cols="8">
+        <!-- <v-row>
+          <v-col>
+            <time-line-header />
+          </v-col>
+        </v-row> -->
+        <v-row v-for="post in posts" v-bind:key="post.id">
+          <v-col>
+            <post :value="post" />
+          </v-col>
+        </v-row>
       </v-col>
-    </v-row>
-    <v-row v-for="post in posts" v-bind:key="post.id">
-      <v-col>
-        <post :value="post" />
+      <v-col cols="4">
+        <v-row>
+          <v-col cols="10">
+            <v-card
+              color="primary"
+              style="position: fixed"
+              width="200"
+            >
+              <v-card-title class="text-h5 pa-3 white--text">
+                Menu
+              </v-card-title>
+
+              <v-list
+                nav
+                dense
+              >
+                <v-list-item link>
+                  <v-list-item-icon>
+                    <v-icon>mdi-pencil-plus</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-title>New Post</v-list-item-title>
+                </v-list-item>
+                <v-list-item link>
+                  <v-list-item-icon>
+                    <v-icon>mdi-magnify</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-title>Search</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </v-container>
