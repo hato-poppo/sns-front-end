@@ -74,34 +74,34 @@ export default defineComponent({
   setup: () => {
     const posts = [
       {
-        id: 10, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿10', content: 'これはテスト投稿10です',
+        id: 10, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿10', content: 'これはテスト投稿10です', created_at: '2021-07-05 06:00:00',
       },
       {
-        id: 9, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿9', content: 'これはテスト投稿9です',
+        id: 9, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿9', content: 'これはテスト投稿9です', created_at: '2021-07-05 05:30:00',
       },
       {
-        id: 8, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿8', content: 'これはテスト投稿8です',
+        id: 8, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿8', content: 'これはテスト投稿8です', created_at: '2021-07-05 05:00:00',
       },
       {
-        id: 7, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿7', content: 'これはテスト投稿7です',
+        id: 7, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿7', content: 'これはテスト投稿7です', created_at: '2021-07-05 04:30:00',
       },
       {
-        id: 6, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿6', content: 'これはテスト投稿6です',
+        id: 6, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿6', content: 'これはテスト投稿6です', created_at: '2021-07-05 04:00:00',
       },
       {
-        id: 5, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿5', content: 'これはテスト投稿5です',
+        id: 5, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿5', content: 'これはテスト投稿5です', created_at: '2021-07-05 03:30:00',
       },
       {
-        id: 4, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿4', content: 'これはテスト投稿4です',
+        id: 4, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿4', content: 'これはテスト投稿4です', created_at: '2021-07-05 03:00:00',
       },
       {
-        id: 3, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿3', content: 'これはテスト投稿3です',
+        id: 3, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿3', content: 'これはテスト投稿3です', created_at: '2021-07-05 02:30:00',
       },
       {
-        id: 2, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿2', content: 'これはテスト投稿2です',
+        id: 2, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿2', content: 'これはテスト投稿2です', created_at: '2021-07-05 02:00:00',
       },
       {
-        id: 1, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿1', content: 'これはテスト投稿1です',
+        id: 1, user_id: 1, user_name: 'hato-poppo', title: 'テスト投稿1', content: 'これはテスト投稿1です', created_at: '2021-07-05 01:30:00',
       },
     ];
 
