@@ -7,7 +7,7 @@
     <site-sidebar />
 
     <!-- main contents -->
-    <v-main>
+    <v-main :style="{ background: $vuetify.theme.themes.light.background }">
       <router-view/>
     </v-main>
   </v-app>
@@ -25,9 +25,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-main {
-  background-color: #FFF9EE;
-}
-</style>
