@@ -6,6 +6,7 @@
     :max-width="width"
   >
     <post-title :text="value.title" />
+    <post-date :value="value.created_at" />
     <post-content :text="value.content" />
 
     <v-card-actions>
@@ -22,12 +23,14 @@
 import { defineComponent } from '@vue/composition-api';
 import LoginUser from '@/components/molecules/list-items/LoginUser.vue';
 import Title from '@/components/molecules/post-items/Title.vue';
+import DateTime from '@/components/molecules/post-items/DateTime.vue';
 import Content from '@/components/molecules/post-items/Content.vue';
 
 export default defineComponent({
   components: {
     'login-user': LoginUser,
     'post-title': Title,
+    'post-date': DateTime,
     'post-content': Content,
   },
   props: {
