@@ -26,11 +26,11 @@
       </v-col>
       <v-col cols="4">
         <v-row>
-          <v-col cols="10">
+          <v-col cols="12">
             <v-card
               color="primary"
               style="position: fixed"
-              width="200"
+              width="250"
             >
               <v-card-title class="text-h5 pa-3 white--text">
                 Menu
@@ -40,12 +40,47 @@
                 nav
                 dense
               >
-                <v-list-item link>
+                <v-list-item link @click="dialog.open()">
                   <v-list-item-icon>
                     <v-icon>mdi-pencil-plus</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>New Post</v-list-item-title>
+                  <v-list-item-title>New post</v-list-item-title>
                 </v-list-item>
+                <v-dialog
+                  v-model="dialog.show"
+                  width="500"
+                >
+                  <v-card>
+                    <v-card-title
+                      class="white--text"
+                      :style="{ background: $vuetify.theme.themes.light.primary }"
+                    >
+                      New post
+                    </v-card-title>
+                    <v-card-text class="pa-5">
+                      <v-textarea
+                        label="Please input content."
+                        hide-details
+                      ></v-textarea>
+                    </v-card-text>
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn
+                        color="secondary"
+                        text
+                        @click="dialog.close()"
+                      >
+                        Cancel
+                      </v-btn>
+                      <v-btn
+                        color="secondary"
+                        elevation="0"
+                      >
+                        Post
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
                 <v-list-item link>
                   <v-list-item-icon>
                     <v-icon>mdi-magnify</v-icon>
@@ -62,7 +97,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent, reactive } from '@vue/composition-api';
 import TimeLineHeader from '@/components/organisms/contents/TimeLineHeader.vue';
 import Post from '@/components/organisms/contents/Post.vue';
 
@@ -105,8 +140,19 @@ export default defineComponent({
       },
     ];
 
+    const dialog = reactive({
+      show: false,
+      open: () => {
+        dialog.show = true;
+      },
+      close: () => {
+        dialog.show = false;
+      },
+    });
+
     return {
       posts,
+      dialog,
     };
   },
 });
