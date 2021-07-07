@@ -45,9 +45,9 @@ type Props = {
 
 export default defineComponent({
   props: {
-    show: Boolean,
+    value: Boolean,
   },
-  setup: (props: Props) => {
+  setup: (props: Props, context) => {
     const show = ref<boolean>(props.value);
     const close = () => {
       show.value = false;
@@ -55,6 +55,10 @@ export default defineComponent({
 
     watch(() => props.value, (value) => {
       show.value = value;
+    });
+
+    watch(() => show.value, (value) => {
+      context.emit('input', value);
     });
 
     return {
