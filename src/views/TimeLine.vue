@@ -46,41 +46,7 @@
                   </v-list-item-icon>
                   <v-list-item-title>New post</v-list-item-title>
                 </v-list-item>
-                <v-dialog
-                  v-model="dialog.show"
-                  width="500"
-                >
-                  <v-card>
-                    <v-card-title
-                      class="white--text"
-                      :style="{ background: $vuetify.theme.themes.light.primary }"
-                    >
-                      New post
-                    </v-card-title>
-                    <v-card-text class="pa-5">
-                      <v-textarea
-                        label="Please input content."
-                        hide-details
-                      ></v-textarea>
-                    </v-card-text>
-                    <v-card-actions>
-                      <v-spacer></v-spacer>
-                      <v-btn
-                        color="secondary"
-                        text
-                        @click="dialog.close()"
-                      >
-                        Cancel
-                      </v-btn>
-                      <v-btn
-                        color="secondary"
-                        elevation="0"
-                      >
-                        Post
-                      </v-btn>
-                    </v-card-actions>
-                  </v-card>
-                </v-dialog>
+                <new-post-dialog :show="dialog.show" />
                 <v-list-item link>
                   <v-list-item-icon>
                     <v-icon>mdi-magnify</v-icon>
@@ -100,11 +66,13 @@
 import { defineComponent, reactive } from '@vue/composition-api';
 import TimeLineHeader from '@/components/organisms/contents/TimeLineHeader.vue';
 import Post from '@/components/organisms/contents/Post.vue';
+import NewPost from '@/components/organisms/dialog/NewPost.vue';
 
 export default defineComponent({
   components: {
     'time-line-header': TimeLineHeader,
     Post,
+    'new-post-dialog': NewPost,
   },
   setup: () => {
     const posts = [
