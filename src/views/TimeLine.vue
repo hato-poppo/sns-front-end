@@ -46,7 +46,7 @@
                   </v-list-item-icon>
                   <v-list-item-title>New post</v-list-item-title>
                 </v-list-item>
-                <new-post-dialog :show="dialog.show" />
+                <new-post-dialog v-model="dialog.show" />
                 <v-list-item link>
                   <v-list-item-icon>
                     <v-icon>mdi-magnify</v-icon>
