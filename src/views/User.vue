@@ -11,17 +11,25 @@
         </v-toolbar>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="pa-6">
+    <v-row justify="center">
+      <v-col cols="12" class="px-6">
         <v-card
           width="250"
           height="200"
+          class="py-2"
+          color="secondary"
         >
-          <login-user
-            class="px-2 py-1"
-            :avatar="require('@/assets/avatars/2220812101741.jpg')"
-            :name="'hato-poppo'"
-          />
+          <div class="mx-auto text-center justify-center">
+            <v-avatar
+              size="72"
+              class="my-2"
+            >
+              <v-img :src="require('@/assets/avatars/2220812101741.jpg')" />
+            </v-avatar>
+            <h3 class="white--text">hato-poppo</h3>
+            <p class="text-caption white--text">hato-poppo@gmail.com</p>
+            <v-divider class="my-1"></v-divider>
+          </div>
         </v-card>
       </v-col>
     </v-row>
